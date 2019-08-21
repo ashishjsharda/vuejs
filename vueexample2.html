@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+	<title>Using Vue JS</title>
+</head>
+<body>
+	<div id="intro" style="text-align:center">
+		<h1>{{message}}</h1>
+		<h1>{{firstName}}</h1>
+		<h1>{{lastName}}</h1>
+		<h1>{{mydetail()}}</h1>
+	</div>
+	<script type="text/javascript">
+
+		var vue_dat = new Vue({
+			el: '#intro',
+			data: {
+				message: 'My first Vue js message',
+				firstName: 'Sai',
+				lastName: 'Baba'
+			},
+			methods: {
+				mydetail: function () {
+					return 'Full Name is ' + this.firstName + 'LastName is ' + this.lastName;
+				}
+			}
+
+			});
+	</script>
+</body>
+</html>
